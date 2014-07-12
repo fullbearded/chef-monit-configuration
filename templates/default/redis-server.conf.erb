@@ -1,0 +1,5 @@
+check process redis with pidfile /data/pids/redis.pid
+  group database
+  start program = "/etc/init.d/redis-server start"
+  stop program = "/etc/init.d/redis-server stop"
+  if 15 restarts within 15 cycles then timeout
