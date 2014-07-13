@@ -1,8 +1,8 @@
-template "/etc/monit.d/mongod.conf" do
+template "/etc/monit.d/newrelic.conf" do
   owner "root"
   group "root"
   mode "0700"
-  source "mongod.conf.erb"
+  source "newrelic.conf.erb"
   notifies :run, "execute[restart-monit]", :immediately
 end
 

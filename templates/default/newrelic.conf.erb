@@ -1,0 +1,6 @@
+#Monitoring newrelic Service
+
+check process newrelic with pidfile /tmp/nrsysmond.pid
+  start program = "/etc/init.d/newrelic-sysmond start"
+  stop program = "/etc/init.d/newrelic-sysmond stop"
+  if 15 restarts within 15 cycles then timeout
